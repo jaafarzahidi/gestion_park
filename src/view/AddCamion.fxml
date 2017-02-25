@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="542.0" prefWidth="707.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjouterCamion">
+   <children>
+      <JFXTextField fx:id="fieldImmatriculation" layoutX="32.0" layoutY="33.0" maxWidth="205.0" minWidth="205.0" prefHeight="31.0" prefWidth="205.0" promptText="Immatriculation" />
+      <JFXTextField fx:id="fieldMarque" layoutX="32.0" layoutY="224.0" maxWidth="205.0" minWidth="205.0" prefHeight="31.0" prefWidth="205.0" promptText="Marque " />
+      <JFXTextField fx:id="fieldModele" layoutX="32.0" layoutY="285.0" maxWidth="205.0" minWidth="205.0" prefHeight="31.0" prefWidth="205.0" promptText="Modèle" />
+      <JFXTextField fx:id="fieldCarburant" layoutX="32.0" layoutY="358.0" maxWidth="205.0" minWidth="205.0" prefHeight="31.0" prefWidth="205.0" promptText="Carburant" />
+      <JFXButton fx:id="add" layoutX="209.0" layoutY="496.0" onAction="#addCamion" prefHeight="25.0" prefWidth="228.0" text="Save" />
+      <JFXComboBox fx:id="comboetat" layoutX="39.0" layoutY="429.0" prefHeight="25.0" prefWidth="192.0" promptText="Etat" />
+      <DatePicker fx:id="fieldEntree" layoutX="35.0" layoutY="94.0" />
+      <DatePicker fx:id="fieldSortie" layoutX="35.0" layoutY="158.0" />
+      <JFXTextField fx:id="pfiscal" layoutX="374.0" layoutY="34.0" maxWidth="205.0" minWidth="192.0" prefHeight="31.0" prefWidth="205.0" promptText="Puissance Fiscal" />
+      <ComboBox fx:id="assurance" layoutX="371.0" layoutY="94.0" prefHeight="25.0" prefWidth="205.0" promptText="Assurance" />
+      <JFXTextField fx:id="poidsmax" layoutX="374.0" layoutY="155.0" maxWidth="205.0" minWidth="192.0" prefHeight="31.0" prefWidth="205.0" promptText="Poids Maximal" />
+      <JFXTextField fx:id="emission" layoutX="374.0" layoutY="224.0" maxWidth="205.0" minWidth="192.0" prefHeight="31.0" prefWidth="205.0" promptText="Emission CO2" />
+      <JFXTextField fx:id="kilometrage" layoutX="374.0" layoutY="285.0" maxWidth="205.0" minWidth="192.0" prefHeight="31.0" prefWidth="205.0" promptText="kilometrage" />
+      <JFXTextField fx:id="consommation" layoutX="371.0" layoutY="358.0" maxWidth="205.0" minWidth="192.0" prefHeight="31.0" prefWidth="205.0" promptText="consommation" />
+      <JFXTextField fx:id="age" layoutX="371.0" layoutY="426.0" maxWidth="205.0" minWidth="192.0" prefHeight="31.0" prefWidth="205.0" promptText="age" />
+   </children>
+</AnchorPane>
