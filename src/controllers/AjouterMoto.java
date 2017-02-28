@@ -39,7 +39,7 @@ public class AjouterMoto implements Initializable {
 		// TODO Auto-generated method stub
 		comboetat.getItems().add("En panne");
 		comboetat.getItems().add("Disponible");
-		
+
 		assurance.getItems().add("Oui");
 		assurance.getItems().add("Non");
 
@@ -50,13 +50,12 @@ public class AjouterMoto implements Initializable {
 		Connection connection = SqliteConnection.connector();
 
 		 String s1 = new String(fieldImmatriculation.getText());
-		 System.out.println(comboetat.getSelectionModel().getSelectedItem());
 		 String s2 = new String(fieldEntree.getValue().toString());
 		 String s3 = new String(fieldSortie.getValue().toString());
-		 String s4 = new String(fieldMarque.getText());System.out.println("1");
-		 String s5 = new String(fieldModele.getText());System.out.println("2");
-		 String s7 = new String(comboetat.getSelectionModel().getSelectedItem());
-		String query = "INSERT INTO Vehicule VALUES('"+s1+"','"+s2+"','"+s3+"','"+s4+"','"+s5+"','','"+s7+"')";
+		 String s4 = new String(fieldMarque.getText());
+		 String s5 = new String(fieldModele.getText());
+		 String s6 = new String(comboetat.getSelectionModel().getSelectedItem());
+		String query = "INSERT INTO Vehicule VALUES('"+s1+"','"+s2+"','"+s3+"','"+s4+"','"+s5+"','','"+s6+"','-','-','-','-','-','-','-','Moto')";
 		System.out.println(connection.createStatement().executeUpdate(query));
 		s.close();
 

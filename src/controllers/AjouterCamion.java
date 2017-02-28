@@ -22,7 +22,7 @@ public class AjouterCamion implements Initializable {
 	@FXML private DatePicker fieldSortie ;
 	@FXML private TextField fieldMarque ;
 	@FXML private TextField fieldModele ;
-	@FXML private TextField fieldCarburant ;
+	@FXML private ComboBox<String> fieldCarburant ;
 	@FXML private ComboBox<String> comboetat;
 	@FXML private TextField pfiscal;
 	@FXML private ComboBox<String> assurance;
@@ -38,9 +38,14 @@ public class AjouterCamion implements Initializable {
 		// TODO Auto-generated method stub
 		comboetat.getItems().add("En panne");
 		comboetat.getItems().add("Disponible");
-		
+
 		assurance.getItems().add("Oui");
 		assurance.getItems().add("Non");
+
+		fieldCarburant.getItems().add("Essence");
+		fieldCarburant.getItems().add("Diesel");
+
+
 
 
 	}
@@ -49,20 +54,22 @@ public class AjouterCamion implements Initializable {
 		Connection connection = SqliteConnection.connector();
 
 		 String s1 = new String(fieldImmatriculation.getText());
-		 System.out.println(pfiscal.getText());
 		 String s2 = new String(fieldEntree.getValue().toString());
 		 String s3 = new String(fieldSortie.getValue().toString());
 		 String s4 = new String(fieldMarque.getText());
 		 String s5 = new String(fieldModele.getText());
-		 String s6 = new String(fieldCarburant.getText());
-		 String s7 = new String(comboetat.getSelectionModel().getSelectedItem());
-		 int s8 = Integer.parseInt(pfiscal.getText());
-		 String s9 = assurance.getSelectionModel().getSelectedItem();
-		 int s10 = Integer.parseInt(poidsmax.getText());
-		 double s11 = Double.parseDouble(emission.getText());
-		 long s12 = Long.parseLong(kilometrage.getText());
-		 double s13 = Double.parseDouble(consommation.getText());
-		 int s14 = Integer.parseInt(age.getText());
+		 String s6 = new String(comboetat.getSelectionModel().getSelectedItem());
+		 String s7 = assurance.getSelectionModel().getSelectedItem();
+		 double s8 = Double.parseDouble(emission.getText());
+		 long s9 = Long.parseLong(kilometrage.getText());
+		 double s10 = Double.parseDouble(consommation.getText());
+		 int s11 = Integer.parseInt(age.getText());
+		 String s12 = new String(fieldCarburant.getSelectionModel().getSelectedItem());
+		 int s13 = Integer.parseInt(pfiscal.getText());
+		 int s14 = Integer.parseInt(poidsmax.getText());
+
+
+
 		String query = "INSERT INTO Vehicule VALUES('"+s1+"','"+s2+"','"+s3+"','"+s4+"','"+s5+"','"+s6+"','"+s7+"','"+s8+"','"+s9+"','"+s10+"','"+s11+"','"+s12+"','"+s13+"','"+s14+"','Camion')";
 		System.out.println(connection.createStatement().executeUpdate(query));
 		s.close();

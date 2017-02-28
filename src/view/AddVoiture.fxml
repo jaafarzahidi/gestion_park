@@ -12,12 +12,12 @@
       <JFXTextField fx:id="fieldImmatriculation" layoutX="32.0" layoutY="33.0" maxWidth="205.0" minWidth="205.0" prefHeight="31.0" prefWidth="205.0" promptText="Immatriculation" />
       <JFXTextField fx:id="fieldMarque" layoutX="32.0" layoutY="239.0" maxWidth="205.0" minWidth="205.0" prefHeight="31.0" prefWidth="205.0" promptText="Marque " />
       <JFXTextField fx:id="fieldModele" layoutX="32.0" layoutY="297.0" maxWidth="205.0" minWidth="205.0" prefHeight="31.0" prefWidth="205.0" promptText="Modèle" />
-      <JFXTextField fx:id="fieldCarburant" layoutX="32.0" layoutY="380.0" maxWidth="205.0" minWidth="205.0" prefHeight="31.0" prefWidth="205.0" promptText="Carburant" />
       <JFXButton fx:id="add" layoutX="396.0" layoutY="227.0" onAction="#addVoiture" prefHeight="25.0" prefWidth="228.0" text="Save" />
       <JFXComboBox fx:id="comboetat" layoutX="42.0" layoutY="444.0" prefHeight="25.0" prefWidth="192.0" promptText="Etat" />
       <DatePicker fx:id="fieldEntree" layoutX="35.0" layoutY="106.0" />
       <DatePicker fx:id="fieldSortie" layoutX="35.0" layoutY="173.0" />
       <JFXTextField fx:id="pfiscal" layoutX="374.0" layoutY="34.0" maxWidth="205.0" minWidth="192.0" prefHeight="31.0" prefWidth="205.0" promptText="Puissance Fiscal" />
       <ComboBox fx:id="assurance" layoutX="374.0" layoutY="94.0" prefHeight="25.0" prefWidth="205.0" promptText="Assurance" />
+      <JFXComboBox fx:id="fieldCarburant" layoutX="39.0" layoutY="377.0" prefHeight="25.0" prefWidth="192.0" promptText="Carburant" />
    </children>
 </AnchorPane>

@@ -3,10 +3,10 @@ package model;
 import javafx.beans.property.SimpleStringProperty;
 
 public class Camion extends Vehicule{
-	private final SimpleStringProperty carburant;
+	private final String carburant;
 	private final int pFiscal;
 	private final int poidMax;
-	public SimpleStringProperty getCarburant() {
+	public String getCarburant() {
 		return carburant;
 	}
 	public int getpFiscal() {
@@ -19,7 +19,7 @@ public class Camion extends Vehicule{
 			String etat,String assurance, double emission, long kilometrage, double consommation, int age,String carburant,int pFiscal,int poidsMax) {
 		super(immatriculation, dateEntreeParc, dateSortieParc, marque, modele, etat, emission, kilometrage, consommation, age,
 				assurance);
-		this.carburant=new SimpleStringProperty(carburant);
+		this.carburant=new String(carburant);
 		this.pFiscal=pFiscal;
 		this.poidMax=poidsMax;
 	}

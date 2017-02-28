@@ -22,7 +22,7 @@ public class AjouterVoiture implements Initializable {
 	@FXML private DatePicker fieldSortie ;
 	@FXML private TextField fieldMarque ;
 	@FXML private TextField fieldModele ;
-	@FXML private TextField fieldCarburant ;
+	@FXML private ComboBox<String> fieldCarburant ;
 	@FXML private ComboBox<String> comboetat;
 	@FXML private TextField pfiscal;
 	@FXML private ComboBox<String> assurance;
@@ -33,9 +33,12 @@ public class AjouterVoiture implements Initializable {
 		// TODO Auto-generated method stub
 		comboetat.getItems().add("En panne");
 		comboetat.getItems().add("Disponible");
-		
+
 		assurance.getItems().add("Oui");
 		assurance.getItems().add("Non");
+
+		fieldCarburant.getItems().add("Essence");
+		fieldCarburant.getItems().add("Diesel");
 
 
 	}
@@ -44,15 +47,16 @@ public class AjouterVoiture implements Initializable {
 		Connection connection = SqliteConnection.connector();
 
 		 String s1 = new String(fieldImmatriculation.getText());
-		 System.out.println(assurance.getSelectionModel().getSelectedItem());
-		 System.out.println(pfiscal.getText());
 		 String s2 = new String(fieldEntree.getValue().toString());
 		 String s3 = new String(fieldSortie.getValue().toString());
-		 String s4 = new String(fieldMarque.getText());System.out.println("1");
-		 String s5 = new String(fieldModele.getText());System.out.println("2");
-		 String s6 = new String(fieldCarburant.getText());System.out.println("3");
-		 String s7 = new String(comboetat.getSelectionModel().getSelectedItem());
-		String query = "INSERT INTO Vehicule VALUES('"+s1+"','"+s2+"','"+s3+"','"+s4+"','"+s5+"','"+s6+"','"+s7+"')";
+		 String s4 = new String(fieldMarque.getText());
+		 String s5 = new String(fieldModele.getText());
+		 String s6 = new String(comboetat.getSelectionModel().getSelectedItem());
+		 String s7 = new String(assurance.getSelectionModel().getSelectedItem());
+		 String s12 = new String(fieldCarburant.getSelectionModel().getSelectedItem());
+		 String s13 = new String(pfiscal.getText());
+
+		String query = "INSERT INTO Vehicule VALUES('"+s1+"','"+s2+"','"+s3+"','"+s4+"','"+s5+"','"+s6+"','"+s7+"','-','-','-','-','"+s12+"','"+s13+"','-','Voiture')";
 		System.out.println(connection.createStatement().executeUpdate(query));
 		s.close();
 
