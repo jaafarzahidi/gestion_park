@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ResourceBundle;
 
+import application.UserName;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -33,6 +34,7 @@ public class LoginController implements Initializable{
 	private PasswordField motDePasse;
 	@FXML
 	private Button auth ;
+	public static String user;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -55,7 +57,7 @@ public class LoginController implements Initializable{
 		try{
 			if(loginModel.isLogin(txtUserName.getText(), motDePasse.getText())){
 				isConnected.setText("your are logged in !");
-
+				user = txtUserName.getText();
 				Stage primaryStage = null;
 				primaryStage = (Stage) auth.getScene().getWindow();
 				ObservableList<Screen> screens = Screen.getScreensForRectangle(new Rectangle2D(primaryStage.getX(), primaryStage.getY(), primaryStage.getWidth(), primaryStage.getHeight()));
@@ -67,9 +69,12 @@ public class LoginController implements Initializable{
 				primaryStage.setHeight(bounds.getHeight());
 				FXMLLoader loader = new FXMLLoader();
 				Pane root = loader.load(getClass().getResource("/view/PanelAcceuil.fxml").openStream());
+
+
 				Scene scene = new Scene(root);
 
 				primaryStage.setScene(scene);
+				primaryStage.setMaximized(true);
 
 
 				primaryStage.show();

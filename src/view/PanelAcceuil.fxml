@@ -28,14 +28,15 @@
                   </AnchorPane>
             </content>
           </TitledPane>
-          <TitledPane animated="false" text="Ajouter Utilisateur">
+          <TitledPane accessibleRole="BUTTON" animated="false" onMouseClicked="#methAddUser" text="Ajouter Utilisateur">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
             </content>
           </TitledPane>
+            <TitledPane fx:id="graphe1" accessibleRole="BUTTON" onMouseClicked="#statistics" prefHeight="200.0" prefWidth="200.0" text="Statistiques" />
         </panes>
       </Accordion>
-      <ImageView fitHeight="596.0" fitWidth="1210.0" layoutX="205.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="596.0" fitWidth="1209.0" layoutX="205.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@premierePage.png" />
          </image>
@@ -159,12 +160,12 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="1013.0" layoutY="627.0" prefHeight="37.0" prefWidth="92.0" text="Voitures" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="1013.0" layoutY="627.0" prefHeight="37.0" prefWidth="92.0" text="Essence" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="1119.0" layoutY="627.0" prefHeight="37.0" prefWidth="83.0" text="Camions" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="1119.0" layoutY="627.0" prefHeight="37.0" prefWidth="83.0" text="Diesel" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -191,7 +192,7 @@
       </Label>
       <Pane layoutX="205.0" layoutY="58.0" prefHeight="46.0" prefWidth="1194.0" style="-fx-background-color: #daad03;">
          <children>
-            <Label fx:id="pageActuelle" layoutX="14.0" layoutY="-2.0" prefHeight="46.0" prefWidth="146.0" text="Label">
+            <Label fx:id="pageActuelle" layoutX="14.0" layoutY="-2.0" prefHeight="46.0" prefWidth="401.0" text="Label">
                <font>
                   <Font name="System Bold" size="28.0" />
                </font>
@@ -199,5 +200,24 @@
          </children>
       </Pane>
       <ImageView fitHeight="55.0" fitWidth="82.0" layoutX="62.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXButton fx:id="buttonLogout" layoutX="1288.0" layoutY="14.0" onAction="#logout" prefHeight="33.0" prefWidth="70.0" style="-fx-background-color: #FFA07A;" text="Logout">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <Label fx:id="labUser" layoutX="988.0" prefHeight="53.0" prefWidth="313.0" text="Bonjour ">
+         <font>
+            <Font name="Centaur" size="28.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="55.0" fitWidth="360.0" layoutX="8.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="logo.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="1093.0" layoutY="486.0" prefHeight="37.0" prefWidth="146.0" text="Voitures" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

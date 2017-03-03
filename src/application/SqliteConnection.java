@@ -7,8 +7,8 @@ import java.sql.DriverManager;
 public class SqliteConnection {
 	public static Connection connector() {
 		try{
-			Class.forName("org.sqlite.JDBC");
-			Connection conn = DriverManager.getConnection("jdbc:sqlite:D:\\eclipse\\Databases\\EmployeeDb.sqlite");
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projet","root","");
 			return conn;
 		}
 		catch(Exception e){

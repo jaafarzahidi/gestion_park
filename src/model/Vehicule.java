@@ -3,17 +3,20 @@ package model;
 import javafx.beans.property.SimpleStringProperty;
 
 public class Vehicule {
-	private final SimpleStringProperty immatriculation;
-	private final SimpleStringProperty dateEntreeParc;
-	private final SimpleStringProperty dateSortieParc;
-	private final SimpleStringProperty marque;
-	private final SimpleStringProperty modele;
-	private final SimpleStringProperty assurance;
-	private final double emission;
-	private final long kilometrage;
-	private final double consommation;
-	private final int age;
-	private final SimpleStringProperty etat;
+	private SimpleStringProperty immatriculation;
+	private SimpleStringProperty dateEntreeParc;
+	private SimpleStringProperty dateSortieParc;
+	private SimpleStringProperty marque;
+	private SimpleStringProperty modele;
+	private SimpleStringProperty assurance;
+	private double emission;
+	private long kilometrage;
+	private double consommation;
+	private int age;
+	private SimpleStringProperty etat;
+	public Vehicule(){
+
+	}
 	public Vehicule(String immatriculation,String dateEntreeParc,String dateSortieParc,String marque,String modele,String etat,double emission,long kilometrage,double consommation,int age,String assurance){
 		super();
 		this.immatriculation = new SimpleStringProperty(immatriculation);
@@ -28,6 +31,7 @@ public class Vehicule {
 		this.assurance =new SimpleStringProperty(assurance);
 		this.etat = new SimpleStringProperty(etat);
 	}
+
 
 	public String getImmatriculation() {
 		return immatriculation.get();

@@ -3,12 +3,13 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/LoginApp/jfoenix.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/Etudes/Semestre 1/JAVA/Projets/NavigateurWeb/Code_Source/Navigateur2/dist/lib/sqlite-jdbc-3.7.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/LoginApp/poi-bin-3.15-20160924/poi-3.15/poi-3.15.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/LoginApp/poi-bin-3.15-20160924/poi-3.15/poi-ooxml-3.15.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/LoginApp/poi-bin-3.15-20160924/poi-3.15/poi-ooxml-schemas-3.15.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/LoginApp/poi-bin-3.15-20160924/poi-3.15/ooxml-lib/xmlbeans-2.6.0.jar"/>
-	<classpathentry kind="lib" path="D:/téléchargements/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="libs/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="libs/controlsfx-8.40.12.jar"/>
+	<classpathentry kind="lib" path="libs/jfoenix.jar"/>
+	<classpathentry kind="lib" path="libs/mysql-connector-java-5.1.22-bin.jar"/>
+	<classpathentry kind="lib" path="libs/poi-3.15.jar"/>
+	<classpathentry kind="lib" path="libs/poi-ooxml-3.15.jar"/>
+	<classpathentry kind="lib" path="libs/poi-ooxml-schemas-3.15.jar"/>
+	<classpathentry kind="lib" path="libs/xmlbeans-2.6.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
